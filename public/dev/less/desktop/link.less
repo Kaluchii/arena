@@ -1,7 +1,8 @@
 .link{
-  .link(@c-main-green, tint(@c-main-green, 75%), @c-main-orange, tint(@c-main-orange, 75%));
+  .link(@c-main-orange, tint(@c-main-orange, 75%), lighten(@c-main-orange, 20%), lighten(tint(@c-main-orange, 75%), 4%));
 }
 
+/*
 .link-local{
   .dotted-link(@c-main-green, tint(@c-main-green, 75%), @c-main-orange, tint(@c-main-orange, 75%));
 }
@@ -16,4 +17,4 @@
 
 .link-on-dark{
   .link(@c-light-green, darken(@c-light-green, 30%), @c-light-orange, darken(@c-light-orange, 30%));
-}
+}*/
