@@ -218,16 +218,13 @@
 
 
         <section class="main-page__habit habit">
-            <div class="habit__header">
+            <div class="habit__header main-info">
                 <h3 class="main-info__title title-l1">Привычка побеждать</h3>
                 <p class="main-info__text">Чтобы развивать дисциплину и строить привычку достигать цель, мы делаем
                     участникам вызовы. Это упражнения и простые задания, которые помогают выйти из зоны комфорта.
                 </p>
             </div>
             <div class="habit__body">
-                <div class="habit__img-wrap">
-                    <img src="/img/habit-winning_img.jpg" alt="" class="habit__img">
-                </div>
                 <div class="habit__info-col">
                     <div class="habit__text-wrap text-blocks text-blocks--center">
                         <p class="text-blocks__item">За выполненный вызов участники получают рейтинг.
@@ -239,6 +236,9 @@
                         </p>
                     </div>
                     <p class="habit__change">Награда изменит вас навсегда</p>
+                </div>
+                <div class="habit__img-wrap">
+                    <img src="/img/habit-winning_img.jpg" alt="" class="habit__img">
                 </div>
             </div>
         </section>
@@ -270,44 +270,84 @@
                     <input type="email" class="mailing__input input">
                 </div>
                 <div class="mailing__btn-wrap">
-                    <button class="mailing__btn button"><span class="button__text">Подписаться</span></button>
+                    <button class="mailing__btn button"><span class="button__text">ПОДПИСАТЬСЯ</span></button>
                 </div>
             </div>
         </section>
 
 
         <section class="main-page__instagram instagram">
-            <h3 class="instagram__title">Наш Инстаграм</h3>
+            <h3 class="instagram__title title-l1">Наш Инстаграм</h3>
             <div class="instagram__gallery">
-                <div class="instagram__img-wrap">
-                    <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                <div class="instagram__gallery-item">
+                    <div class="instagram__gallery-item-container">
+                        <div class="instagram__img-wrap">
+                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                        </div>
+                    </div>
                 </div>
-                <div class="instagram__img-wrap">
-                    <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                <div class="instagram__gallery-item">
+                    <div class="instagram__gallery-item-container">
+                        <div class="instagram__img-wrap">
+                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                        </div>
+                    </div>
                 </div>
-                <div class="instagram__img-wrap">
-                    <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                <div class="instagram__gallery-item">
+                    <div class="instagram__gallery-item-container">
+                        <div class="instagram__img-wrap">
+                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                        </div>
+                    </div>
                 </div>
-                <div class="instagram__img-wrap">
-                    <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                <div class="instagram__gallery-item">
+                    <div class="instagram__gallery-item-container">
+                        <div class="instagram__img-wrap">
+                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                        </div>
+                    </div>
                 </div>
-                <div class="instagram__img-wrap">
-                    <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                <div class="instagram__gallery-item">
+                    <div class="instagram__gallery-item-container">
+                        <div class="instagram__img-wrap">
+                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                        </div>
+                    </div>
                 </div>
-                <div class="instagram__img-wrap">
-                    <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                <div class="instagram__gallery-item">
+                    <div class="instagram__gallery-item-container">
+                        <div class="instagram__img-wrap">
+                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                        </div>
+                    </div>
                 </div>
-                <div class="instagram__img-wrap">
-                    <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                <div class="instagram__gallery-item">
+                    <div class="instagram__gallery-item-container">
+                        <div class="instagram__img-wrap">
+                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                        </div>
+                    </div>
                 </div>
-                <div class="instagram__img-wrap">
-                    <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                <div class="instagram__gallery-item">
+                    <div class="instagram__gallery-item-container">
+                        <div class="instagram__img-wrap">
+                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                        </div>
+                    </div>
                 </div>
-                <div class="instagram__img-wrap">
-                    <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                <div class="instagram__gallery-item">
+                    <div class="instagram__gallery-item-container">
+                        <div class="instagram__img-wrap">
+                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                        </div>
+                    </div>
                 </div>
-                <div class="instagram__img-wrap">
-                    <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                <div class="instagram__gallery-item">
+                    <div class="instagram__gallery-item-container">
+                        <div class="instagram__img-wrap">
+                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                        </div>
+                    </div>
                 </div>
             </div>
             <p class="instagram__subscribe-text">Подпишитесь на Brave в <a href="#" class="link bold">Инстаграме</a> и будьте в курсе наших новостей</p>
@@ -315,7 +355,7 @@
 
 
         <section class="main-page__what-prevents what-prevents">
-            <h3 class="what-prevents__title">Что мешает начать?</h3>
+            <h3 class="what-prevents__title title-l1">Что мешает начать?</h3>
             <ul class="what-prevents__causes accordion">
                 <li class="accordion__item">
                     <p class="accordion__item-title">Я подумаю, может начну попозже</p>

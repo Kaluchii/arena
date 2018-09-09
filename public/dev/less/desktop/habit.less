@@ -1,15 +1,41 @@
 .habit{
   &__header{}
 
-  &__body{}
-
-  &__img-wrap{}
-
-  &__img{}
+  &__body{
+    margin-top: 65px;
+    display: flex;
+  }
 
   &__info-col{}
 
   &__text-wrap{}
 
-  &__change{}
+  &__change{
+    position: relative;
+    margin: 110px auto 0;
+    max-width: 310px;
+    font-size: 36px;
+    font-weight: @fw-bold;
+    line-height: @lh-for-big;
+    text-align: center;
+    color: @c-main-dark;
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -30%);
+      z-index: -1;
+      width: 193px;
+      height: 190px;
+      background: url("/img/wreath-of-winner.png") no-repeat center / contain;
+    }
+  }
+
+  &__img-wrap{
+    margin-left: 85px;
+  }
+
+  &__img{}
 }

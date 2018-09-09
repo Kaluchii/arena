@@ -1,3 +1,15 @@
 .text-blocks{
-  &__item{}
+  &--center{
+    text-align: center;
+  }
+
+  &__item{
+    font-size: @fz-5;
+    line-height: @lh-for-small;
+    color: @c-main-dark;
+
+    & + &{
+      margin-top: 20px;
+    }
+  }
 }

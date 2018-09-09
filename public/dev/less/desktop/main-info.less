@@ -1,5 +1,18 @@
 .main-info{
-  &__title{}
+  text-align: center;
+  color: @c-main-dark;
 
-  &__text{}
+  &--white{
+    color: @c-main-light;
+  }
+
+  &__title{
+    color: inherit;
+  }
+
+  &__text{
+    margin-top: 30px;
+    font-size: @fz-4;
+    line-height: @lh-for-small;
+  }
 }

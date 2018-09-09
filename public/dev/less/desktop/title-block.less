@@ -1,23 +1,73 @@
 .title-block{
-  background: url("/img/title-block_bg.jpg") no-repeat center / cover;
+  padding: 100px 50px 60px;
+  background: linear-gradient(-45deg, #ffffff 105px, transparent 0),
+              linear-gradient(45deg, #ffffff 105px, transparent 0),
+              url("/img/title-block_left-man.png") no-repeat left bottom,
+              url("/img/title-block_right-man.png") no-repeat right bottom,
+              url("/img/title-block_bg.jpg") no-repeat center / cover;
 
-  &__title-wrap{}
+  &__title-wrap{
+    font-size: 56px;
+    font-weight: @fw-bold;
+    line-height: @lh-for-medium;
+    color: @c-main-light;
+    text-align: center;
+  }
 
-  &__title{}
+  &__title{
+    display: inline;
+    font-size: inherit;
+    color: inherit;
+  }
 
   &__select{}
 
-  &__objectives{}
+  &__objectives{
+    margin-top: 25px;
+    font-size: @fz-4;
+    color: #CCCCCC;
+    text-align: center;
+  }
 
-  &__objectives-item{}
+  &__objectives-item{
+    & + &{
+      &::before{
+        content: '\2022';
+        padding: 0 10px 0 5px;
+        font-size: 12px;
+        vertical-align: middle;
+      }
+    }
+  }
 
-  &__mans{}
+  &__mans{
+    margin-top: 340px;
+    padding: 0 290px;
+    display: flex;
+    justify-content: space-between;
+  }
 
-  &__mans-item{}
+  &__mans-item{
+    line-height: @lh-for-small;
 
-  &__man-name{}
+    &:nth-child(2){
+      text-align: right;
+    }
+  }
 
-  &__man-occupation{}
+  &__man-name{
+    font-size: @fz-6;
+    font-weight: @fw-bold;
+    color: @c-main-orange;
+  }
 
-  &__man-info{}
+  &__man-occupation{
+    font-size: @fz-7;
+    color: @c-main-light;
+  }
+
+  &__man-info{
+    font-size: @fz-7;
+    color: @c-main-light;
+  }
 }
