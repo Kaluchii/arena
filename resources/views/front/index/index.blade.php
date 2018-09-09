@@ -26,8 +26,8 @@
 
         <section class="main-page__title-block title-block">
             <div class="title-block__title-wrap">
-                <h1 class="title-block__title">Любительские спаринги</h1> в
-                <div class="title-block__select">Талдыкоргане</div>
+                <h1 class="title-block__title">Любительские<br>спарринги</h1>
+                в&nbsp;<div class="title-block__select-wrap">Талдыкоргане</div>
             </div>
             <div class="title-block__objectives">
                 <span class="title-block__objectives-item">Спарринги</span>
@@ -221,7 +221,7 @@
             <div class="habit__header main-info">
                 <h3 class="main-info__title title-l1">Привычка побеждать</h3>
                 <p class="main-info__text">Чтобы развивать дисциплину и строить привычку достигать цель, мы делаем
-                    участникам вызовы. Это упражнения и простые задания, которые помогают выйти из зоны комфорта.
+                    участникам вызовы. Это упражнения и простые задания, которые&nbsp;помогают выйти из зоны комфорта.
                 </p>
             </div>
             <div class="habit__body">
@@ -267,7 +267,7 @@
             </div>
             <div class="mailing__subscribe">
                 <div class="mailing__input-wrap">
-                    <input type="email" class="mailing__input input">
+                    <input type="email" class="mailing__input input" placeholder="EXAMPLE@MAIL.COM">
                 </div>
                 <div class="mailing__btn-wrap">
                     <button class="mailing__btn button"><span class="button__text">ПОДПИСАТЬСЯ</span></button>
@@ -420,7 +420,7 @@
         <section class="main-page__create-profile create-profile">
             <div class="create-profile__wrapper">
                 <h3 class="create-profile__title title-l3">Создайте профиль</h3>
-                <p class="create-profile__text">Вы сможете пригласить на спарринг друга или участникаBrave,
+                <p class="create-profile__text">Вы сможете пригласить на спарринг друга или участника Brave,
                     принимать вызовы и получать рейтинг.
                 </p>
                 <div class="create-profile__btn-wrap">
