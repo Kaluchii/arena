@@ -80,7 +80,7 @@
                                 <a href="#" class="free-exercise__btn button"><span class="button__text">ЗАПИСАТЬСЯ</span></a>
                             </div>
                             <p class="free-exercise__text-near-button">Тренировка по физподготовке
-                                и основам самозащиты
+                                и&nbsp;основам самозащиты
                             </p>
                         </div>
                     </div>
@@ -356,53 +356,65 @@
 
         <section class="main-page__what-prevents what-prevents">
             <h3 class="what-prevents__title title-l1">Что мешает начать?</h3>
-            <ul class="what-prevents__causes accordion">
+            <ul class="what-prevents__causes accordion js_accordion">
                 <li class="accordion__item">
                     <p class="accordion__item-title">Я подумаю, может начну попозже</p>
-                    <div class="accordion__item-content">
-                        <p class="accordion__text">Здорово! Надеемся, вам нравится и вы довольны результатом.
-                            Если станет скучно — попробуйте прийти к нам на бесплатную тренировку. У нас особенная
-                            атмосфера для занятий спортом.
-                        </p>
+                    <div class="accordion__item-content-wrap">
+                        <div class="accordion__item-content">
+                            <p class="accordion__text">Здорово! Надеемся, вам нравится и вы довольны результатом.
+                                Если станет скучно — попробуйте прийти к нам на бесплатную тренировку. У нас особенная
+                                атмосфера для занятий спортом.
+                            </p>
+                        </div>
                     </div>
                 </li>
                 <li class="accordion__item">
                     <p class="accordion__item-title">Я пока не готов физически</p>
-                    <div class="accordion__item-content">
-                        <p class="accordion__text">Здорово! Надеемся, вам нравится и вы довольны результатом.
-                            Если станет скучно — попробуйте прийти к нам на бесплатную тренировку. У нас особенная
-                            атмосфера для занятий спортом.
-                        </p>
+                    <div class="accordion__item-content-wrap">
+                        <div class="accordion__item-content">
+                            <p class="accordion__text">Здорово! Надеемся, вам нравится и вы довольны результатом.
+                                Если станет скучно — попробуйте прийти к нам на бесплатную тренировку. У нас особенная
+                                атмосфера для занятий спортом.
+                            </p>
+                        </div>
                     </div>
                 </li>
                 <li class="accordion__item">
                     <p class="accordion__item-title">Я не люблю драки, насилие и агрессию</p>
-                    <div class="accordion__item-content">
-                        <p class="accordion__text">Здорово! Надеемся, вам нравится и вы довольны результатом.
-                            Если станет скучно — попробуйте прийти к нам на бесплатную тренировку. У нас особенная
-                            атмосфера для занятий спортом.
-                        </p>
+                    <div class="accordion__item-content-wrap">
+                        <div class="accordion__item-content">
+                            <p class="accordion__text">Здорово! Надеемся, вам нравится и вы довольны результатом.
+                                Если станет скучно — попробуйте прийти к нам на бесплатную тренировку. У нас особенная
+                                атмосфера для занятий спортом.
+                            </p>
+                        </div>
                     </div>
                 </li>
                 <li class="accordion__item">
                     <p class="accordion__item-title">Нет лишних денег, я могу тренироваться сам</p>
-                    <div class="accordion__item-content">
-                        <p class="accordion__text">Здорово! Надеемся, вам нравится и вы довольны результатом.
-                        </p>
+                    <div class="accordion__item-content-wrap">
+                        <div class="accordion__item-content">
+                            <p class="accordion__text">Здорово! Надеемся, вам нравится и вы довольны результатом.
+                            </p>
+                        </div>
                     </div>
                 </li>
                 <li class="accordion__item">
                     <p class="accordion__item-title">Я занят, времени совсем нет</p>
-                    <div class="accordion__item-content">
-                        <p class="accordion__text">Здорово! Надеемся, вам нравится и вы довольны результатом.
-                        </p>
+                    <div class="accordion__item-content-wrap">
+                        <div class="accordion__item-content">
+                            <p class="accordion__text">Здорово! Надеемся, вам нравится и вы довольны результатом.
+                            </p>
+                        </div>
                     </div>
                 </li>
                 <li class="accordion__item">
                     <p class="accordion__item-title">Я уже тренируюсь</p>
-                    <div class="accordion__item-content">
-                        <p class="accordion__text">Здорово! Надеемся, вам нравится и вы довольны результатом.
-                        </p>
+                    <div class="accordion__item-content-wrap">
+                        <div class="accordion__item-content">
+                            <p class="accordion__text">Здорово! Надеемся, вам нравится и вы довольны результатом.
+                            </p>
+                        </div>
                     </div>
                 </li>
             </ul>
