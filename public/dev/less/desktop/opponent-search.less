@@ -1,11 +1,29 @@
 .opponent-search{
-  &__criterions{}
+  padding: 145px 0 35px;
+  background: url("/img/opponent-search_bg.jpg") no-repeat center / cover;
+
+  &__criterions{
+    display: flex;
+  }
 
   &__field{}
 
   &__btn{}
 
-  &__result{}
+  &__result{
+    margin-top: 45px;
+    font-size: @fz-4;
+    font-weight: @fw-bold;
+    line-height: 1;
+    color: @c-main-light;
+    text-align: center;
+  }
 
-  &__about-battles{}
+  &__about-battles{
+    margin-top: 60px;
+    font-size: @fz-7;
+    line-height: @lh-for-small;
+    color: @c-main-light;
+    text-align: center;
+  }
 }

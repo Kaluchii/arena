@@ -1,25 +1,69 @@
 .reviews{
   &__slider{}
 
-  &__slide{}
+  &__slide{
+    display: flex;
+  }
 
   &__person-img-wrap{}
 
   &__img{}
 
-  &__person-info{}
+  &__person-info{
+    position: relative;
+    padding: 50px 25px 135px;
+    background-color: @c-light-blue;
+    color: @c-main-dark;
+    text-align: center;
 
-  &__person-name{}
+    /*&::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 90px;
+      box-sizing: border-box;
+    }*/
+  }
 
-  &__person-occupation{}
+  &__person-name{
+    font-size: @fz-2;
+    font-weight: @fw-bold;
+    line-height: @lh-for-big;
+  }
+
+  &__person-occupation{
+    margin-top: 10px;
+    font-size: @fz-6;
+    line-height: @lh-for-small;
+  }
+
+  &__person-about-me-wrap{
+    margin-top: 40px;
+    font-size: @fz-5;
+    line-height: @lh-for-small;
+  }
 
   &__person-about-me{}
 
-  &__highlight{}
+  &__highlight{
+    padding: 0 2px 2px;
+    background-color: #ffe083;
+  }
 
-  &__objectives-wrap{}
+  &__objectives-wrap{
+    margin-top: 45px;
+  }
 
-  &__objectives-title{}
+  &__objectives-title{
+    font-size: @fz-4;
+    font-weight: @fw-bold;
+    line-height: @lh-for-small;
+  }
 
-  &__objectives{}
+  &__objectives{
+    font-size: @fz-5;
+    line-height: @lh-for-small;
+  }
 }
