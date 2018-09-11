@@ -10,12 +10,12 @@ $(document).ready(function () {
 
             if ($this.parent().hasClass('is-open')) {
                 $this.parent().removeClass('is-open');
-                $this.next().slideUp(2350);
+                $this.next().slideUp(350);
             } else {
                 $this.parent().parent().find('.accordion__item').removeClass('is-open');
                 $this.parent().parent().find('.accordion__item-content-wrap').slideUp(350);
                 $this.parent().toggleClass('is-open');
-                $this.next().slideToggle(2350);
+                $this.next().slideToggle(350);
             }
 
             /*var $this = $(this);

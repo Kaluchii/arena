@@ -450,7 +450,7 @@
                 </p>
             </div>
             <ul class="join-brave__offers">
-                <li class="join-brave__offer brave-offer">
+                <li class="join-brave__offer brave-offer brave-offer--1">
                     <div class="brave-offer__top">
                         <div class="brave-offer__title">ПЕРВАЯ<br>ТРЕНИРОВКА</div>
                         <div class="brave-offer__description">Экскурсия, инструктаж и занятие в группе для новых участников.</div>
@@ -464,7 +464,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="join-brave__offer brave-offer">
+                <li class="join-brave__offer brave-offer brave-offer--2">
                     <div class="brave-offer__top">
                         <div class="brave-offer__title">ПЕРВЫЙ<br>СПАРРИНГ</div>
                         <div class="brave-offer__description">Со своим партнером или инструктором. Футболка участника в подарок.</div>
@@ -478,7 +478,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="join-brave__offer brave-offer">
+                <li class="join-brave__offer brave-offer brave-offer--3">
                     <div class="brave-offer__top">
                         <div class="brave-offer__title">МЕСЯЧНЫЙ<br>АБОНЕМЕНТ</div>
                         <div class="brave-offer__description">Тренировочный курс с инструктором, 8 спаррингов, фирменная футболка.</div>
