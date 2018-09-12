@@ -1,4 +1,13 @@
 $(document).ready(function () {
+    $(".js_reviews_slick").slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        // adaptiveHeight: true
+    });
+
+
     var accordion = $('.js_accordion');
     if (accordion.length) {
         var title = accordion.find('.accordion__item-title');

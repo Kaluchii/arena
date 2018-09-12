@@ -34,6 +34,12 @@
     min-height: 100%;
     object-fit: cover;
     object-position: center;
+    filter: grayscale(100%);
+    transition: .4s;
+
+    &:hover{
+      filter: grayscale(0);
+    }
   }
 
   &__subscribe-text{

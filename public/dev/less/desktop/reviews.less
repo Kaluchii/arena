@@ -1,17 +1,32 @@
 .reviews{
+  padding: 0 50px;
+
   &__slider{}
 
-  &__slide{
+  &__slide{}
+
+  &__slide-container{
+    position: relative;
     display: flex;
+    justify-content: flex-end;
   }
 
-  &__person-img-wrap{}
+  &__person-img-wrap{
+    position: absolute;
+    top: 0;
+    right: 30%;
+    max-width: 810px;
+    max-height: 100%;
+  }
 
   &__img{}
 
   &__person-info{
     position: relative;
-    padding: 50px 25px 135px;
+    width: 48%;
+    max-width: 560px;
+    flex-shrink: 0;
+    padding: 50px 32px 135px;
     background-color: @c-light-blue;
     color: @c-main-dark;
     text-align: center;
@@ -45,7 +60,26 @@
     line-height: @lh-for-small;
   }
 
-  &__person-about-me{}
+  &__person-about-me{
+    &::before, &::after{
+      position: relative;
+      top: 6px;
+      font-size: 48px;
+      line-height: 0;
+      font-weight: @fw-bold;
+      opacity: .2;
+    }
+
+    &::before{
+      content: '\00AB';
+      padding-right: 3px;
+    }
+
+    &::after{
+      content: '\00BB';
+      padding-left: 3px;
+    }
+  }
 
   &__highlight{
     padding: 0 2px 2px;
@@ -65,5 +99,14 @@
   &__objectives{
     font-size: @fz-5;
     line-height: @lh-for-small;
+  }
+
+
+  .slick-dots{
+    bottom: -50px;
+  }
+
+  .slick-dots li button:before{
+    font-size: 10px;
   }
 }

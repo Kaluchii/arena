@@ -191,26 +191,78 @@
 
 
         <section class="main-page__reviews reviews">
-            <div class="reviews__slider">
+            <div class="reviews__slider js_reviews_slick">
                 <div class="reviews__slide">
-                    <div class="reviews__person-img-wrap">
-                        <img src="/img/reviews_1.jpg" alt="" class="reviews__img">
-                    </div>
-                    <div class="reviews__person-info">
-                        <div class="reviews__person-name">Борис Федоров</div>
-                        <div class="reviews__person-occupation">Предпринематель, 30 лет</div>
-                        <div class="reviews__person-about-me-wrap">
-                            <span class="reviews__person-about-me">
-                                В первую очередь, я стал дисциплинированней и спокойней. До сих пор помню, как дрожали колени, когда впервые вышел на спарринг. Соперник казался непобедимым, но поединок шел довольно ровно.
-                                <span class="reviews__highlight">Я уступил по очкам, но добился огромной победы внутри.</span> Перестраивать себя сложно: дисциплина растет медленно, но я вижу результаты, совершаю маленькие шаги и двигаюсь вперед.
-                            </span>
+                    <div class="reviews__slide-container">
+                        <div class="reviews__person-img-wrap">
+                            <img src="/img/reviews_1.jpg" alt="" class="reviews__img">
                         </div>
-                        <div class="reviews__objectives-wrap">
-                            <div class="reviews__objectives-title">Цели за месяц</div>
-                            <div class="reviews__objectives">
-                                Выполнил 100 отжиманий за раз<br>
-                                Прошел через 15 поединков<br>
-                                Увеличил зарплату в 2,5 раза
+                        <div class="reviews__person-info">
+                            <div class="reviews__person-name">Борис Федоров</div>
+                            <div class="reviews__person-occupation">Предпринематель, 30 лет</div>
+                            <div class="reviews__person-about-me-wrap">
+                                <span class="reviews__person-about-me">
+                                    В первую очередь, я стал дисциплинированней и спокойней. До сих пор помню, как дрожали колени, когда впервые вышел на спарринг. Соперник казался непобедимым, но поединок шел довольно ровно.
+                                    <span class="reviews__highlight">Я уступил по очкам, но добился огромной победы внутри.</span> Перестраивать себя сложно: дисциплина растет медленно, но я вижу результаты, совершаю маленькие шаги и двигаюсь вперед.
+                                </span>
+                            </div>
+                            <div class="reviews__objectives-wrap">
+                                <div class="reviews__objectives-title">Цели за месяц</div>
+                                <div class="reviews__objectives">
+                                    Выполнил 100 отжиманий за раз<br>
+                                    Прошел через 15 поединков<br>
+                                    Увеличил зарплату в 2,5 раза
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__slide">
+                    <div class="reviews__slide-container">
+                        <div class="reviews__person-img-wrap">
+                            <img src="/img/reviews_1.jpg" alt="" class="reviews__img">
+                        </div>
+                        <div class="reviews__person-info">
+                            <div class="reviews__person-name">Борис Федоров</div>
+                            <div class="reviews__person-occupation">Предпринематель, 30 лет</div>
+                            <div class="reviews__person-about-me-wrap">
+                                <span class="reviews__person-about-me">
+                                    В первую очередь, я стал дисциплинированней и спокойней. До сих пор помню, как дрожали колени, когда впервые вышел на спарринг. Соперник казался непобедимым, но поединок шел довольно ровно.
+                                    <span class="reviews__highlight">Я уступил по очкам, но добился огромной победы внутри.</span> Перестраивать себя сложно: дисциплина растет медленно, но я вижу результаты, совершаю маленькие шаги и двигаюсь вперед.
+                                </span>
+                            </div>
+                            <div class="reviews__objectives-wrap">
+                                <div class="reviews__objectives-title">Цели за месяц</div>
+                                <div class="reviews__objectives">
+                                    Выполнил 100 отжиманий за раз<br>
+                                    Прошел через 15 поединков<br>
+                                    Увеличил зарплату в 2,5 раза
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__slide">
+                    <div class="reviews__slide-container">
+                        <div class="reviews__person-img-wrap">
+                            <img src="/img/reviews_1.jpg" alt="" class="reviews__img">
+                        </div>
+                        <div class="reviews__person-info">
+                            <div class="reviews__person-name">Борис Федоров</div>
+                            <div class="reviews__person-occupation">Предпринематель, 30 лет</div>
+                            <div class="reviews__person-about-me-wrap">
+                                <span class="reviews__person-about-me">
+                                    В первую очередь, я стал дисциплинированней и спокойней. До сих пор помню, как дрожали колени, когда впервые вышел на спарринг. Соперник казался непобедимым, но поединок шел довольно ровно.
+                                    <span class="reviews__highlight">Я уступил по очкам, но добился огромной победы внутри.</span> Перестраивать себя сложно: дисциплина растет медленно, но я вижу результаты, совершаю маленькие шаги и двигаюсь вперед.
+                                </span>
+                            </div>
+                            <div class="reviews__objectives-wrap">
+                                <div class="reviews__objectives-title">Цели за месяц</div>
+                                <div class="reviews__objectives">
+                                    Выполнил 100 отжиманий за раз<br>
+                                    Прошел через 15 поединков<br>
+                                    Увеличил зарплату в 2,5 раза
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -284,7 +336,21 @@
                 <div class="instagram__gallery-item">
                     <div class="instagram__gallery-item-container">
                         <div class="instagram__img-wrap">
-                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                            <img src="/img/placeholder.jpg" alt="" class="instagram__img">
+                        </div>
+                    </div>
+                </div>
+                <div class="instagram__gallery-item">
+                    <div class="instagram__gallery-item-container">
+                        <div class="instagram__img-wrap">
+                            <img src="/img/placeholder.jpg" alt="" class="instagram__img">
+                        </div>
+                    </div>
+                </div>
+                <div class="instagram__gallery-item">
+                    <div class="instagram__gallery-item-container">
+                        <div class="instagram__img-wrap">
+                            <img src="/img/placeholder.jpg" alt="" class="instagram__img">
                         </div>
                     </div>
                 </div>
@@ -298,56 +364,42 @@
                 <div class="instagram__gallery-item">
                     <div class="instagram__gallery-item-container">
                         <div class="instagram__img-wrap">
-                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                            <img src="/img/placeholder.jpg" alt="" class="instagram__img">
                         </div>
                     </div>
                 </div>
                 <div class="instagram__gallery-item">
                     <div class="instagram__gallery-item-container">
                         <div class="instagram__img-wrap">
-                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                            <img src="/img/placeholder.jpg" alt="" class="instagram__img">
                         </div>
                     </div>
                 </div>
                 <div class="instagram__gallery-item">
                     <div class="instagram__gallery-item-container">
                         <div class="instagram__img-wrap">
-                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                            <img src="/img/placeholder.jpg" alt="" class="instagram__img">
                         </div>
                     </div>
                 </div>
                 <div class="instagram__gallery-item">
                     <div class="instagram__gallery-item-container">
                         <div class="instagram__img-wrap">
-                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                            <img src="/img/placeholder.jpg" alt="" class="instagram__img">
                         </div>
                     </div>
                 </div>
                 <div class="instagram__gallery-item">
                     <div class="instagram__gallery-item-container">
                         <div class="instagram__img-wrap">
-                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                            <img src="/img/placeholder.jpg" alt="" class="instagram__img">
                         </div>
                     </div>
                 </div>
                 <div class="instagram__gallery-item">
                     <div class="instagram__gallery-item-container">
                         <div class="instagram__img-wrap">
-                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
-                        </div>
-                    </div>
-                </div>
-                <div class="instagram__gallery-item">
-                    <div class="instagram__gallery-item-container">
-                        <div class="instagram__img-wrap">
-                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
-                        </div>
-                    </div>
-                </div>
-                <div class="instagram__gallery-item">
-                    <div class="instagram__gallery-item-container">
-                        <div class="instagram__img-wrap">
-                            <img src="/img/instagram-image.jpg" alt="" class="instagram__img">
+                            <img src="/img/placeholder.jpg" alt="" class="instagram__img">
                         </div>
                     </div>
                 </div>
