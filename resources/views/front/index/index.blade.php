@@ -176,7 +176,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="opponent-search__field">
+                    <div class="opponent-search__field opponent-search__field--btn">
                         <a href="#" class="opponent-search__btn button">
                             <span class="button__text">ПОКАЗАТЬ</span>
                         </a>

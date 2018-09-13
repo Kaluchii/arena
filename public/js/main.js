@@ -7,6 +7,8 @@ $(document).ready(function () {
         // adaptiveHeight: true
     });
 
+    $('.select').select2();
+
 
     var accordion = $('.js_accordion');
     if (accordion.length) {
