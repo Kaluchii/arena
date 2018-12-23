@@ -1,9 +1,11 @@
-var gulp         = require('gulp'),
+var
+    gulp         = require('gulp'),
 
     autoprefixer = require('gulp-autoprefixer'),
     less         = require('gulp-less'),
     cssmin       = require('gulp-cssmin'),
     csscomb      = require('gulp-csscomb'),
+    uglify       = require('gulp-uglify'),
     postcss      = require('gulp-postcss'),
     reporter     = require('postcss-reporter'),
     htmllint     = require('gulp-htmllint'),
@@ -11,10 +13,9 @@ var gulp         = require('gulp'),
 
     svgmin       = require('gulp-svgmin'),
     imagemin     = require('gulp-imagemin'),
+    browserSync  = require('browser-sync'),
 
     changeCase   = require('change-case'),
-    watch        = require('gulp-watch'),
-    livereload   = require('gulp-livereload'),
     concat       = require('gulp-concat'),
     plumber      = require('gulp-plumber'),
     rename       = require('gulp-rename'),
@@ -29,15 +30,15 @@ var gulp         = require('gulp'),
 // -- Переменные для настройки
 //======================================================================================================================
 // пути до файлов
-var config         = '/dev/config',
-    dev_css        = 'dev/less/',
-    dev_img        = 'dev/img/',
-    production_css = './css/',
-    production_img = './img/',
+var devCss         = './dev/less/',
+    devImg         = './dev/img/',
+    devJs          = './dev/js/',
+    productionCss  = './css/',
+    productionImg  = './img/',
     html           = '../resources/views/front/';
 // Параметры для галпа
 var arguments    = args.argv;
-var isProduction = (arguments.production === undefined) ? true : false;
+var isProduction = arguments.production === undefined;
 // Расширения изображений
 var image_ext = '{png,Png,PNG,jpg,Jpg,JPG,jpeg,Jpeg,JPEG,gif,Gif,GIF,bmp,BMP,Bmp}';
 //======================================================================================================================
@@ -59,21 +60,43 @@ gulp.task('js:test', function(){
 //Компиляция и обработка LESS
 //======================================================================================================================
 gulp.task('style', function () {
-    gulp.src(dev_css + '*.less')
+    gulp.src(devCss + '*.less')
         .pipe(plumber())
-        .pipe(_if(isProduction, sourcemaps.init()))// Если передан ключ --production то sourcemap не пишется.
+        .pipe(_if(!isProduction, sourcemaps.init())) // Если передан ключ --production то sourcemap не пишется.
         .pipe(less())
         .pipe(autoprefixer('last 20 version', 'safari 5', 'ie 8', 'ie9', 'opera 12.1', 'chrome', 'ff', 'ios'))
         .pipe(csscomb('./dev/config/.csscomb.json'))
-        .pipe(_if(!isProduction, cssmin())) // Если передан ключ --production то css файл будет минимизирован и оптимизирован
-        .pipe(_if(isProduction, sourcemaps.write() )) // Если передан ключ --production то sourcemap не пишется.
-        .pipe(gulp.dest(production_css))
-        .pipe(livereload())
+        .pipe(_if(isProduction, cssmin())) // Если передан ключ --production то css файл будет минимизирован и оптимизирован
+        .pipe(_if(!isProduction, sourcemaps.write() )) // Если передан ключ --production то sourcemap не пишется.
+        .pipe(gulp.dest(productionCss))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 //======================================================================================================================
 
+gulp.task('js', function() {
+    gulp.src([
+        devJs + 'plugins/*.js',
+        devJs + 'plugins/**/*.js',
+    ])
+        .pipe(concat('vendor.js'))
+        .pipe(_if(isProduction, uglify()))
+        .pipe(gulp.dest('./js'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 
-
+    gulp.src([
+        devJs + '*.js'
+    ])
+        .pipe(concat('scripts.js'))
+        .pipe(_if(isProduction, uglify()))
+        .pipe(gulp.dest('./js'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+});
 
 //======================================================================================================================
 //Валидация LESS и HTML
@@ -92,7 +115,7 @@ gulp.task('lint:less', function () {
         })
     ];
 
-    return gulp.src(dev_css + '**/*.less')
+    return gulp.src(devCss + '**/*.less')
                .pipe(plumber())
                .pipe(postcss(processors, {syntax: syntax_less}));
 });
@@ -122,7 +145,7 @@ function htmllintReporter(filepath, issues) {
 //======================================================================================================================
 gulp.task('image', function () {
     // Оптимизация всех файлов кроме векторных
-    gulp.src(dev_img + '**.' + image_ext)
+    gulp.src(devImg + '**.' + image_ext)
         .pipe(plumber())
         .pipe(imagemin({
             progressive      : false,
@@ -133,18 +156,22 @@ gulp.task('image', function () {
             path.basename = changeCase.lowerCase(path.basename); // Запись файлов в нижнем регистре вместе с расширением
             path.extname  = changeCase.lowerCase(path.extname);  // Запись файлов в нижнем регистре вместе с расширением
         }))
-        .pipe(gulp.dest(production_img))
-        .pipe(livereload());
+        .pipe(gulp.dest(productionImg))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
     // Оптимизация векторных файлов ( пока только SVG )
-    gulp.src(dev_img + '*.svg')
+    gulp.src(devImg + '*.svg')
         .pipe(plumber())
         .pipe(svgmin())
         .pipe(rename(function (path) {
             path.basename = changeCase.lowerCase(path.basename);
             path.extname  = changeCase.lowerCase(path.extname);
         }))
-        .pipe(gulp.dest(production_img))
-        .pipe(livereload());
+        .pipe(gulp.dest(productionImg))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 //======================================================================================================================
 
@@ -156,10 +183,23 @@ gulp.task('image', function () {
 // Так же следит за новыми файлами изображений - копирует их в рабочую директорию, оптимизирует и переводит в нижний регистр
 // TODO: для картинок сделать CHANGED копирование и оптимизация только изменных файлов
 gulp.task('watch', function () {
-    livereload.listen();
-    gulp.watch(dev_img + '*.*', {cwd: './'}, ['image']);
-    gulp.watch(dev_css + '*.less', {cwd: './'}, ['style']);
-    gulp.watch(dev_css + '**/*.less', {cwd: './'}, ['style']);
+    browserSync.init({
+        browser: ["google-chrome"/*, "firefox"*/],
+        proxy: 'http://l-brave/',
+        notify: false,
+        reloadDelay: 100,
+        serveStatic: ['../css']
+    });
+
+    gulp.watch(devImg + '*.*', ['image']);
+    gulp.watch(devCss + '*.less', ['style']);
+    gulp.watch(devCss + '**/*.less', ['style']);
+    gulp.watch(devJs + '**/*.js', ['js']);
+    gulp.watch(devJs + '**/*.js', ['js']);
+    gulp.watch(devJs + '**/**/*.js', ['js']);
+    gulp.watch(devJs + '**/**/**/*.js', ['js']);
+    gulp.watch(html + '**/*.php', ['style']);
+    gulp.watch(html + '*.php', ['style']);
 });
 //======================================================================================================================
 
