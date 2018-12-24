@@ -102,6 +102,9 @@ gulp.task('js', function() {
 
 gulp.task('php', function() {
     browserSync.reload();
+    browserSync.reload({ // Что бы после перезагрузки страницы стили тоже подтягивались
+        stream: true     // если не работает, то удалить
+    });
 });
 
 //======================================================================================================================
@@ -197,14 +200,14 @@ gulp.task('watch', function () {
         serveStatic: ['../css']
     });
 
-    gulp.watch(devImg + '*.*', ['image']);
-    gulp.watch(devCss + '*.less', ['style']);
-    gulp.watch(devCss + '**/*.less', ['style']);
-    gulp.watch(devJs + '*.js', ['js']);
-    gulp.watch(devJs + 'plugins/*.js', ['vendor-js']);
-    gulp.watch(devJs + 'plugins/**/*.js', ['vendor-js']);
-    gulp.watch(html + '**/*.php', ['php']);
-    gulp.watch(html + '*.php', ['php']);
+    gulp.watch('*.*',{cwd: devImg}, ['image']);
+    gulp.watch('*.less',{cwd: devCss}, ['style']);
+    gulp.watch('**/*.less',{cwd: devCss}, ['style']);
+    gulp.watch( '*.js',{cwd: devJs}, ['js']);
+    gulp.watch('plugins/*.js',{cwd: devJs}, ['vendor-js']);
+    gulp.watch('plugins/**/*.js',{cwd: devJs}, ['vendor-js']);
+    gulp.watch('**/*.php',{cwd: html}, ['php']);
+    gulp.watch('*.php',{cwd: html}, ['php']);
 });
 //======================================================================================================================
 
